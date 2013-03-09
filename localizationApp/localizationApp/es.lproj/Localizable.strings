@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  localizationApp
+
+  Created by Katie on 3/3/13.
+  Copyright (c) 2013 MappsApps Lab. All rights reserved.
+*/
+
+"Title" = "localización App";
+"GREET" = "¡Hola";
+"THANKS" = "Gracias";
