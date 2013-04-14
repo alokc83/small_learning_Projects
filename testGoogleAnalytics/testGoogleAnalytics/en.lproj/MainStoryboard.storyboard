@@ -1,23 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UsC-nd-odZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--TestGA2 View Controller - Second Tab-->
+        <scene sceneID="a6f-2j-hzJ">
+            <objects>
+                <viewController id="BCz-6J-XY2" customClass="testGA2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4HV-ee-1xC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="app_store_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="Peq-VF-TGS"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Peq-VF-TGS" firstAttribute="top" secondItem="4HV-ee-1xC" secondAttribute="top" type="default" id="2jh-vw-deS"/>
+                            <constraint firstItem="Peq-VF-TGS" firstAttribute="leading" secondItem="4HV-ee-1xC" secondAttribute="leading" type="default" id="Vz8-T8-Erk"/>
+                            <constraint firstItem="Peq-VF-TGS" firstAttribute="trailing" secondItem="4HV-ee-1xC" secondAttribute="trailing" type="default" id="hZW-LQ-FTJ"/>
+                            <constraint firstItem="Peq-VF-TGS" firstAttribute="bottom" secondItem="4HV-ee-1xC" secondAttribute="bottom" type="default" id="xeo-EV-BYx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second Tab" badgeValue="2" id="INl-dX-Fqz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEM-SI-g1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="275"/>
+        </scene>
+        <!--TestGA View Controller - first Tab-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="testGAViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="alokc83.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="nK4-MP-SL3"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nK4-MP-SL3" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="3ZR-YJ-fcw"/>
+                            <constraint firstItem="nK4-MP-SL3" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="AeX-J7-Gi8"/>
+                            <constraint firstItem="nK4-MP-SL3" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="mg7-hF-VVG"/>
+                            <constraint firstItem="nK4-MP-SL3" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="xJM-Fb-zye"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="first Tab" badgeValue="1" id="CWf-9d-Baj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="835" y="-405"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="87I-4s-YG0">
+            <objects>
+                <tabBarController id="UsC-nd-odZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qMP-NK-DeE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="vef-LS-7Wo"/>
+                        <segue destination="BCz-6J-XY2" kind="relationship" relationship="viewControllers" id="oCO-fs-bTC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ajd-U1-4G8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="-61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alokc83.jpeg" width="128" height="128"/>
+        <image name="app_store_badge.png" width="929" height="341"/>
+    </resources>
+    <classes>
+        <class className="GAITrackedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GAITrackedViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="testGA2ViewController" superclassName="GAITrackedViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testGA2ViewController.h"/>
+        </class>
+        <class className="testGAViewController" superclassName="GAITrackedViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testGAViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

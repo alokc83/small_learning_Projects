@@ -1,0 +1,31 @@
+body
+{
+    <!-- font-size:290%; -->
+    font-size:100%;
+    background-color:white;
+    padding-left:22px;
+    padding-right:22px;
+    padding-top:50px;
+    text-align:center;
+    color:#00005A;
+    
+    ul {
+        display: table;
+    }
+    li {
+        height: 188px;
+        padding: 0 0 0 164px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.33);
+    }
+    div.cell {
+        padding: 16px;
+        background: url('./page_bg2.png');
+        background-size: 100% 100%;
+    }
+}

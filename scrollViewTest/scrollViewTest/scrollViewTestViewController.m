@@ -16,8 +16,8 @@
 
 @implementation scrollViewTestViewController
 
-@synthesize scrollViewTest = _scrollViewTest;
-@synthesize containerView = _containerView;
+//@synthesize scrollViewTest = _scrollViewTest;
+//@synthesize containerView = _containerView;
 
 
 
@@ -29,32 +29,51 @@
     //Setting up the containerView to hold the hierarchy
     CGSize containerSize = CGSizeMake(320.0f, 700.0f);
     self.containerView = [[UIView alloc]initWithFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=containerSize}];
-    [self.scrollViewTest addSubview:self.containerView];
+    [self.scrollViewTestB addSubview:self.containerView];
     
+    self.scrollViewTestB.contentSize = containerSize;
     // End of section
     
-    //Setting up the custom Hierarchy
-    
+
     
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
    
     
     [super viewDidAppear:animated];
-    // _howtoScrollView.frame = CGRectMake(0, 0, 320, 460);
-    //_scrollViewTest.scrollEnabled = YES;
-    //UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+////
+    
+    CGSize containerSize = CGSizeMake(320.0f, 700.0f);
+    self.containerView = [[UIView alloc]initWithFrame:(CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=containerSize}];
+    [self.scrollViewTestB addSubview:self.containerView];
+    
+    self.scrollViewTestB.contentSize = containerSize;
+////
    
     _scrollViewTest.contentInset=UIEdgeInsetsMake(0.0,0.0,0.0,0.0);
     _scrollViewTest.scrollIndicatorInsets=UIEdgeInsetsMake(0.0,0.0,0.0,0.0);
-    //[self.scrollViewTest addSubview:self.image1];
-    //[self.view addSubview:self.scrollViewTest];
-    [self.scrollViewTest addSubview:self.image2];
+    
+    // B scroll view
+    _scrollViewTestB.contentInset=UIEdgeInsetsMake(0.0,0.0,0.0,0.0);
+    _scrollViewTestB.scrollIndicatorInsets=UIEdgeInsetsMake(0.0,0.0,0.0,0.0);
+    
+    [self.scrollViewTest setContentSize:CGSizeMake(320, 1450)]; // this make the scrolling area
+    
+    //B scroll view
+    
+    [self.scrollViewTestB setContentSize:CGSizeMake(320, 1450)];
+    
+   
+}
 
-    //[self.scrollViewTest setContentSize:CGSizeMake(self.scrollViewTest.frame.size.width, 1000)];
-    [self.scrollViewTest setContentSize:CGSizeMake(320, 4000)];
+- (void)viewDidLayoutSubviews // very very Important
+{
+    [super viewDidLayoutSubviews];
+    self.scrollViewTest.contentSize = CGSizeMake(320.0f, 950.0f);
+    
 }
 
 - (void)didReceiveMemoryWarning

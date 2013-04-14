@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITracker.h"
 
 @interface testGAAppDelegate : UIResponder <UIApplicationDelegate>
 

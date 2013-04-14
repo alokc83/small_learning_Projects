@@ -4,15 +4,28 @@
 //
 //  Created by Katie on 4/12/13.
 //  Copyright (c) 2013 Mapps Lab. All rights reserved.
-//
+// tracking ID UA-40091063-3
+
 
 #import "testGAAppDelegate.h"
+#import "GAI.h"
 
 @implementation testGAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 10;
+    // Optional: set debug to YES for extra debugging information.
+   [GAI sharedInstance].debug = YES;
+    // Create tracker instance.
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-40092794-1"];
+   //[[GAI sharedInstance] trackerWithTrackingId:@"UA-9637279-11"];
+    
     return YES;
 }
 							

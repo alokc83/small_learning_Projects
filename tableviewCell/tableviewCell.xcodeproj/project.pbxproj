@@ -18,6 +18,8 @@
 		02100144170FF7FC00101835 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02100143170FF7FC00101835 /* Default-568h@2x.png */; };
 		02100147170FF7FC00101835 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02100145170FF7FC00101835 /* MainStoryboard.storyboard */; };
 		0210014A170FF7FC00101835 /* tableViewCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02100149170FF7FC00101835 /* tableViewCellViewController.m */; };
+		0210015B170FFBAF00101835 /* chapterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0210015A170FFBAF00101835 /* chapterTableViewCell.m */; };
+		0210015E170FFC7400101835 /* chapterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0210015D170FFC7400101835 /* chapterTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		02100146170FF7FC00101835 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		02100148170FF7FC00101835 /* tableViewCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewCellViewController.h; sourceTree = "<group>"; };
 		02100149170FF7FC00101835 /* tableViewCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewCellViewController.m; sourceTree = "<group>"; };
+		02100159170FFBAF00101835 /* chapterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapterTableViewCell.h; sourceTree = "<group>"; };
+		0210015A170FFBAF00101835 /* chapterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chapterTableViewCell.m; sourceTree = "<group>"; };
+		0210015C170FFC7400101835 /* chapterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapterTableViewController.h; sourceTree = "<group>"; };
+		0210015D170FFC7400101835 /* chapterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chapterTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,11 @@
 		02100133170FF7FC00101835 /* tableviewCell */ = {
 			isa = PBXGroup;
 			children = (
-				0210013C170FF7FC00101835 /* tableViewCellAppDelegate.h */,
-				0210013D170FF7FC00101835 /* tableViewCellAppDelegate.m */,
 				02100145170FF7FC00101835 /* MainStoryboard.storyboard */,
+				0210015C170FFC7400101835 /* chapterTableViewController.h */,
+				0210015D170FFC7400101835 /* chapterTableViewController.m */,
+				02100159170FFBAF00101835 /* chapterTableViewCell.h */,
+				0210015A170FFBAF00101835 /* chapterTableViewCell.m */,
 				02100148170FF7FC00101835 /* tableViewCellViewController.h */,
 				02100149170FF7FC00101835 /* tableViewCellViewController.m */,
 				02100134170FF7FC00101835 /* Supporting Files */,
@@ -96,6 +104,8 @@
 		02100134170FF7FC00101835 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0210013C170FF7FC00101835 /* tableViewCellAppDelegate.h */,
+				0210013D170FF7FC00101835 /* tableViewCellAppDelegate.m */,
 				02100135170FF7FC00101835 /* tableviewCell-Info.plist */,
 				02100136170FF7FC00101835 /* InfoPlist.strings */,
 				02100139170FF7FC00101835 /* main.m */,
@@ -177,6 +187,8 @@
 				0210013A170FF7FC00101835 /* main.m in Sources */,
 				0210013E170FF7FC00101835 /* tableViewCellAppDelegate.m in Sources */,
 				0210014A170FF7FC00101835 /* tableViewCellViewController.m in Sources */,
+				0210015B170FFBAF00101835 /* chapterTableViewCell.m in Sources */,
+				0210015E170FFC7400101835 /* chapterTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

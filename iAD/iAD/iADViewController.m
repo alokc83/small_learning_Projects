@@ -14,10 +14,34 @@
 
 @implementation iADViewController
 
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if(!self.bannerIsVisible){
+        [UIView beginAnimations:@"AnimatedAdBanner" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0.0, 50.0);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+        
+    }
+}
+
+-(void)bannerView(ADBannerView *)aBanner did
+
+
+
+
 - (void)viewDidLoad
 {
+    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.frame = CGRectOffset(adView.frame, 0, 50);
+   // adView.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifier480x32];
+   // adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
+    [self.view addSubview:adView];
+    adView.delegate=self;
+    self.bannerIsVisible=YES;
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning

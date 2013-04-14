@@ -18,6 +18,7 @@
 		020475A1170F59DB00CAFE92 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 020475A0170F59DB00CAFE92 /* Default-568h@2x.png */; };
 		020475A4170F59DC00CAFE92 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020475A2170F59DB00CAFE92 /* MainStoryboard.storyboard */; };
 		020475A7170F59DC00CAFE92 /* iADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 020475A6170F59DC00CAFE92 /* iADViewController.m */; };
+		0210011D170F685500101835 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0210011C170F685500101835 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		020475A3170F59DB00CAFE92 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		020475A5170F59DC00CAFE92 /* iADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iADViewController.h; sourceTree = "<group>"; };
 		020475A6170F59DC00CAFE92 /* iADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iADViewController.m; sourceTree = "<group>"; };
+		0210011C170F685500101835 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0210011D170F685500101835 /* iAd.framework in Frameworks */,
 				0204758B170F59DB00CAFE92 /* UIKit.framework in Frameworks */,
 				0204758D170F59DB00CAFE92 /* Foundation.framework in Frameworks */,
 				0204758F170F59DB00CAFE92 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		0204757E170F59DB00CAFE92 = {
 			isa = PBXGroup;
 			children = (
+				0210011C170F685500101835 /* iAd.framework */,
 				02047590170F59DB00CAFE92 /* iAD */,
 				02047589170F59DB00CAFE92 /* Frameworks */,
 				02047588170F59DB00CAFE92 /* Products */,
@@ -299,6 +303,7 @@
 				020475AC170F59DC00CAFE92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

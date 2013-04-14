@@ -25,6 +25,7 @@
 		025C50B816E92FAF00E2FE2D /* photo5.png in Resources */ = {isa = PBXBuildFile; fileRef = 025C50B216E92FAF00E2FE2D /* photo5.png */; };
 		025C50B916E92FAF00E2FE2D /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = 025C50B316E92FAF00E2FE2D /* slow.png */; };
 		025C50BC16EB136B00E2FE2D /* customScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C50BB16EB136B00E2FE2D /* customScrollViewController.m */; };
+		02790B4216F3FE95008ACEBE /* PagedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02790B4116F3FE95008ACEBE /* PagedScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		025C50B316E92FAF00E2FE2D /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
 		025C50BA16EB136A00E2FE2D /* customScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customScrollViewController.h; sourceTree = "<group>"; };
 		025C50BB16EB136B00E2FE2D /* customScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customScrollViewController.m; sourceTree = "<group>"; };
+		02790B4016F3FE95008ACEBE /* PagedScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagedScrollViewController.h; path = "../../../../../Katie/Developer/small_learning_Projects/RW-ScrollViewTest/RW-ScrollViewTest/PagedScrollViewController.h"; sourceTree = "<group>"; };
+		02790B4116F3FE95008ACEBE /* PagedScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagedScrollViewController.m; path = "../../../../../Katie/Developer/small_learning_Projects/RW-ScrollViewTest/RW-ScrollViewTest/PagedScrollViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				025C50BA16EB136A00E2FE2D /* customScrollViewController.h */,
 				025C50BB16EB136B00E2FE2D /* customScrollViewController.m */,
+				02790B4016F3FE95008ACEBE /* PagedScrollViewController.h */,
+				02790B4116F3FE95008ACEBE /* PagedScrollViewController.m */,
 				025C509A16E92F4700E2FE2D /* rwscrollViewTestAppDelegate.h */,
 				025C509B16E92F4700E2FE2D /* rwscrollViewTestAppDelegate.m */,
 				025C50A316E92F4700E2FE2D /* MainStoryboard.storyboard */,
@@ -207,6 +212,7 @@
 				025C509C16E92F4700E2FE2D /* rwscrollViewTestAppDelegate.m in Sources */,
 				025C50A816E92F4700E2FE2D /* rwscrollViewTestViewController.m in Sources */,
 				025C50BC16EB136B00E2FE2D /* customScrollViewController.m in Sources */,
+				02790B4216F3FE95008ACEBE /* PagedScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +335,7 @@
 				025C50AD16E92F4700E2FE2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

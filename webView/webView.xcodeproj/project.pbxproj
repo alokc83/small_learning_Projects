@@ -123,6 +123,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0278331516DC95EA000CBE91 /* Build configuration list for PBXNativeTarget "webView" */;
 			buildPhases = (
+				02F0F2C916FA3A9800EB8D81 /* ShellScript */,
+				02DD3AF116F78E9900AA0C64 /* ShellScript */,
 				027832EE16DC95EA000CBE91 /* Sources */,
 				027832EF16DC95EA000CBE91 /* Frameworks */,
 				027832F016DC95EA000CBE91 /* Resources */,
@@ -180,6 +182,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02DD3AF116F78E9900AA0C64 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Default.png",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n# xcode-version-generator.sh\n# @desc Auto-increment the version number (only) when a project is archived for export.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Check the checkbox \"Run script only when installing\"\n# 6. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 7. Insure your starting version number is in SemVer format (e.g. 1.0.0)\n\n\n############################FUNCTIONS PRESENT IN SCRIPT ##########################\n#debugMsg() : print the debug msg all over in script and turn them off with single switch\n#addPropertyToList() : Function to add propert to plist takes 3 agrs prop name, type and value\n#updatePlist() : updating the plist if properties already exists\n#versionValues() : printing current value of version variables\n#whatsUpdate()\n#extractVersionNumbers() : Extracting major, minor and revision from version string\n#extractPreviousVersionNumbers() :Extracting major, minor and revision from previous version string\n##################################################################################\n\n## ONLY UNCOMMENT BELOW LINE FOR THE PURPOSE OF DEBUGGING\n#set -x\n\n######### DEBUG MSG function YES to Enable, No to Disable\nDEBUG=\"YES\" # Set DEBUG YES(Enable) or NO(Disable)\n\n######### SYMBOLIC CONSTANT\nblackFlag=\"⚑\"\nwhiteFlag=\"⚐\"\nleftBlackArrow=\"◀\"\nrightBlackArrow=\"▶\"\ndoubleArrow=\"➤➤\"\ncrossmark1=\"✖\"\ncrossmark2=\"✕\"\ncrossmark3=\"✗\"\ncrossmark4=\"✘\"\ntickmark1=\"✓\"\ntickmark2=\"✔\"\n\nstar1=\"☆\"\nstar2=\"✩\"\nstar3=\"✪\"\nstar4=\"✭\"\n\ninfo=\"ℹ\"\n\n############# EXIT CODES\nnotEnoughArgs=44\n\n\n#DEFINEING THE CONST VALUES\nplistFile=\"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n#plistFile=\"InfoT2.plist\" ## TESTING FILE NAME\n\n## Print info Msg and icon\nprintInfo()\n{\n\techo \"($info) Info : $1\"\n}\n\n## Print Error msg and icon\nprintError()\n{\n\techo \"($crossmark1) ERROR : $1\"\n}\n\nprintFlag()\n{\n\techo \"($blackFlag) : $1\"\n}\n\n\n### DEBUG Message function\ndebugMsg()\n{\n\tif [[ $DEBUG == \"YES\" ]]\n\tthen\n\techo \"DEBUG MESSAGE---> $1\"\n\tfi\n}\n\naddPropertyToList()\n{\n\techo \"Using provided arguments to create list.\"\n\tif [[ $# -ne 3 ]]\n\tthen\n    printError \"Not enough arguments to add property to the list\"\n    printFlag \"Exiting script with Error Code $notEnoughArgs.\"\n    #echo \"($info) Info : Find all exit codes in 'Exit Codes' section.\"\n    printInfo \"Find all exit codes in 'Exit Codes' section.\"\n    exit $notEnoughArgs\n\telse\n    echo \"Creating property CustomPreviousBundleShortVersionString.\"\n    /usr/libexec/PlistBuddy -c \"Add :$1 $2 $3\" $plistFile\n    RC=$?\n    if [[ RC -ne 0 ]]\n    then\n    echo \"ERROR : $blackFlag $doubleArrow Exit with error code $?\"\n    exit $?\n    else\n    debugMsg \"Property $1 Added to the $plistFile\"\n    fi\n\tfi\n\tdebugMsg \"end of Add Property function.\"\n}\n\n\n##### FUNCTION TO UPDATE plist\nupdatePlist()\n{\n    \n    #/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n    NEWVERSIONSTRING=`echo $MAJORVERSION.$MINORVERSION.$REVISION`\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" $plistFile\n    debugMsg \"Exit Code is $?\"\n    echo \"Setting CFBundleShortVersionString property to $NEWVERSIONSTRING.\"\n    \n    #Setting up Previous Version String\n    PVERSIONSTRING=`echo $PMAJORVERSION.$PMINORVERSION.$(($REVISION - 1))`\n    /usr/libexec/PlistBuddy -c \"Set :CustomPreviousBundleShortVersionString $PVERSIONSTRING\" $plistFile\n    debugMsg \"Exit Code is $?\"\n    echo \"Setting CustomPreviousBundleShortVersionString property to $PVERSIONSTRING.\"\n    \n}  #end of function\n\n\nversionValues()\n{\n\techo \"Version values as follows:\"\n\techo \"Current version $VERSIONSTRING\"\n\techo \"New version NEWVERSIONSTRING\"\n\techo \"Previous version $PVERSIONSTRING\"\n} #End of funtion\n\nwhatsUpdate()\n{\n\techo \"$plist File is updated with follwoing values \"\n\techo \"New version: CFBundleShortVersionString = $NEWSUBVERSION\"\n\techo \"Previous version: CustomPreviousBundleShortVersionString = $PVERSIONSTRING\"\n} #ENd of function\n\n#Extract Major, Minor and Revision from Version String\nextractVersionNumbers()\n{\n\tMAJORVERSION=`echo $VERSIONSTRING | awk -F \".\" '{print $1}'`\n\tMINORVERSION=`echo $VERSIONSTRING | awk -F \".\" '{print $2}'`\n\tREVISION=`echo $VERSIONSTRING | awk -F \".\" '{print $3}'`\n}\n\n#Extract Major, Minor and Revision from PRevious Version String\nextractPreviousVersionNumbers()\n{\n\t#Extracting Previous Version\n\tPMAJORVERSION=`echo $PVERSIONSTRING | awk -F \".\" '{print $1}'`\n\tPMINORVERSION=`echo $PVERSIONSTRING | awk -F \".\" '{print $2}'`\n\tPREVISION=`echo $PVERSIONSTRING | awk -F \".\" '{print $3}'`\n}\n\n\n\n#Read the if Property file\n# This splits a two-decimal version string, such as \"0.45.123\", allowing us to increment the third position.\n#VERSIONSTRING=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n#PVERSIONSTRING=$(/usr/libexec/PlistBuddy -c \"Print CustomPreviousBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n\n#VERSIONBUILB=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n#PVERSIONBUILD=$(/usr/libexec/PlistBuddy -c \"Print CustomPreviousBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n\nVERSIONSTRING=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" $plistFile)\nVERSIONBUILB=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $plistFile)\n\nPVERSIONSTRING=$(/usr/libexec/PlistBuddy -c \"Print CustomPreviousBundleShortVersionString\" $plistFile)\nRETURNPVERSIONSTRING=$?\ndebugMsg \"Return code for version built $RETURNPVERSIONSTRING\"\nPVERSIONBUILD=$(/usr/libexec/PlistBuddy -c \"Print CustomPreviousBundleVersion\" $plistFile)\nRETURNPVERSIONBUID=$?\ndebugMsg \"Return code for build number $RETURNPVERSIONBUID\"\n\n#PVERSIONSTRING\n#VERSIONSTRING=\"1.2.0\"\n#VERSIONBUILB='3212013'\n\nif [[ $RETURNPVERSIONSTRING -ne 0 ]] #Previous version property does not exists\nthen\necho \"Previous version string does not exists\"\n#### AUTOMATIC PROPERTY CREATETOR CODE\n#/usr/libexec/PlistBuddy -c \"Add :CustomPreviousBundleShortVersionString String $VERSIONSTRING\" $plistFile\naddPropertyToList \"CustomPreviousBundleShortVersionString\" \"String\" $VERSIONSTRING\n#echo \"Write process is done, return code is $?. Zero means property created with value $VERSIONSTRING\"\nPVERSIONSTRING=$VERSIONSTRING\nelse\ndebugMsg \"Previous version number exists, it is $PVERSIONSTRING.\"\nextractVersionNumbers #Extract Major, Minor and Revision from Version String\nextractPreviousVersionNumbers #Extract Major, Minor and Revision from PRevious Version String\n\nif [[ $MINORVERSION -gt $PMINORVERSION ]]\nthen\ndebugMsg \"Minor version is incremented. Setting revision to Zero\"\nREVISION=0\nupdatePlist #Function Call\n#versionValues #Function Call\nelse\nPVERSIONSTRING=$VERSIONSTRING\ndebugMsg \"Incrementing Revision By One\"\nREVISION=$(($REVISION + 1))\nupdatePlist #Function Call\n#versionValues #Function Call\ndebugMsg \"new = $NEWVERSIONSTRING, Previous = $PVERSIONSTRING\"\nfi\n\nfi\n\n#### SYNCING Current and Previous version String\nif [[ $MAJORVERSION -ne $PMAJORVERSION || $MINORVERSION -ne $PMINORVERSION ]]\nthen\necho \"Current and previous version strings are out of sync. Manual override needed\"\nelse\necho \"Current and previous version string are in sync. No action needed\"\nfi\n\nif [[ $REVISION -gt 0 && $REVISION < $PREVISION ]]\nthen\nPREVISION=$(($REVISION - 1))\nfi\n\n######### CHECK IF PREVIOUS BUID EXISTS OR NOT #############\n\nif [[ $RETURNPVERSIONBUID -ne 0 ]]\nthen\ndebugMsg \"Previous Build Number does not exists\"\n#### AUTOMATIC PROPERTY CREATETOR CODE IS BELOW\n/usr/libexec/PlistBuddy -c \"Add :CustomPreviousBundleVersion String $VERSIONBUILB\" $plistFile\ndebugMsg \"Write process is done, return code is $?\"\nPVERSIONBUILD=$VERSIONBUILB\nelse\ndebugMsg \"Previous build number exists, it is $PVERSIONBUILD.\"\nfi\n##############################################\ndebugMsg \"[$PVERSIONSTRING]\"\ndebugMsg \"[$PVERSIONBUILD]\"\n\n\n##########################################################################\n";
+		};
+		02F0F2C916FA3A9800EB8D81 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# xcode-build-number-generator.sh\n# @desc Automaticvally create build number every time using curent day, month and year\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n\n\n#Credits\n# sekati@github for intial direction about automatic versioning\n# http://www.codinghorror.com/blog/2007/02/whats-in-a-version-number-anyway.html (For unferstanding the Software Versoining)\n#Feel free to leave comment or report issues\n\n\nMONTH=`date | awk '{print $2}'`\n\ncase \"$MONTH\" in\n'Jan' )\nMONTHNUMBER=1\n;;\n'Feb' )\nMONTHNUMBER=2\n;;\n'Mar' )\nMONTHNUMBER=3\necho \"Month is $MONTHNUMBER\"\n;;\n'Apr' )\nMONTHNUMBER=4\n;;\n'May' )\nMONTHNUMBER=5\n;;\n'Jun' )\nMONTHNUMBER=6\n;;\n'Jul' )\nMONTHNUMBER=7\n;;\n'Aug' )\nMONTHNUMBER=8\n;;\n'Sep' )\nMONTHNUMBER=9\n;;\n'Oct' )\nMONTHNUMBER=10\n;;\n'Nov' )\nMONTHNUMBER=11\n;;\n'Dec' )\nMONTHNUMBER=12\n;;\nesac\n\nDATE=`date | awk '{print $3}'`\necho \"Date = $DATE\"\nYEAR=`date | awk '{print $6}'`\necho \"Date = $YEAR\"\n\n### only uncomment section below if testing the format in terminal\n#echo \"BuildNumber1 = $MONTH$DATE$YEAR\"\n#echo \"or BUILD NUMBER = $DATE$MONTH$YEAR\"\n#echo \"or BUILD NUMBER = $MONTHNUMBER$DATE$YEAR Format is |Month Number Date Year|\"\n#echo \"or BUILD NUMBER = $DATE$MONTHNUMBER$YEAR format is |Date MonthNumber Year|\"\n############################\n\n#### Uncomment only one one style or last one will be in effect\n#buildNumber=$MONTH$DATE$YEAR\n#buildNumber=$DATE$MONTH$YEAR\nbuildNumber=$MONTHNUMBER$DATE$YEAR\n#buildNumber=$DATE$MONTHNUMBER$YEAR\n\n\necho \"Final Build number is $buildNumber\"\n## Below command write buildNumber in the property list\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		027832EE16DC95EA000CBE91 /* Sources */ = {
@@ -287,6 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "webView/webView-Prefix.pch";
 				INFOPLIST_FILE = "webView/webView-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -311,6 +344,7 @@
 				0278331716DC95EA000CBE91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

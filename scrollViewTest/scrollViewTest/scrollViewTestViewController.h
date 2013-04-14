@@ -17,4 +17,5 @@
 
 - (void)centerScrollViewContents;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewTestB;
 @end

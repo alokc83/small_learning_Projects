@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020474F8170EA39500CAFE92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 020474F7170EA39500CAFE92 /* Settings.bundle */; };
 		02D8CA1416FFCF5E00402CE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D8CA1316FFCF5E00402CE9 /* UIKit.framework */; };
 		02D8CA1616FFCF5E00402CE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D8CA1516FFCF5E00402CE9 /* Foundation.framework */; };
 		02D8CA1816FFCF5E00402CE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D8CA1716FFCF5E00402CE9 /* CoreGraphics.framework */; };
@@ -18,9 +19,48 @@
 		02D8CA2A16FFCF5E00402CE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA2916FFCF5E00402CE9 /* Default-568h@2x.png */; };
 		02D8CA2D16FFCF5E00402CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA2B16FFCF5E00402CE9 /* MainStoryboard.storyboard */; };
 		02D8CA3016FFCF5E00402CE9 /* testTableViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D8CA2F16FFCF5E00402CE9 /* testTableViewControllerViewController.m */; };
+		02D8CA3C16FFD2F300402CE9 /* 02-redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3616FFD2F300402CE9 /* 02-redo.png */; };
+		02D8CA3D16FFD2F300402CE9 /* 03-loopback.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3716FFD2F300402CE9 /* 03-loopback.png */; };
+		02D8CA3E16FFD2F300402CE9 /* 04-squiggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3816FFD2F300402CE9 /* 04-squiggle.png */; };
+		02D8CA3F16FFD2F300402CE9 /* 05-shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3916FFD2F300402CE9 /* 05-shuffle.png */; };
+		02D8CA4016FFD2F300402CE9 /* 07-map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3A16FFD2F300402CE9 /* 07-map-marker.png */; };
+		02D8CA4116FFD2F300402CE9 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA3B16FFD2F300402CE9 /* 08-chat.png */; };
+		02D8CA4516FFD89900402CE9 /* appDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D8CA4416FFD89900402CE9 /* appDetails.m */; };
+		02D8CA4816FFDA0A00402CE9 /* appDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D8CA4716FFDA0A00402CE9 /* appDetailsViewController.m */; };
+		02D8CA6216FFED8200402CE9 /* DurgaAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4916FFED8200402CE9 /* DurgaAartiHindi.html */; };
+		02D8CA6316FFED8200402CE9 /* DurgaChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4A16FFED8200402CE9 /* DurgaChalisaHindi.html */; };
+		02D8CA6416FFED8200402CE9 /* GaneshAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4B16FFED8200402CE9 /* GaneshAartiHindi.html */; };
+		02D8CA6516FFED8200402CE9 /* GaneshChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4C16FFED8200402CE9 /* GaneshChalisaHindi.html */; };
+		02D8CA6616FFED8200402CE9 /* GaneshStutiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4D16FFED8200402CE9 /* GaneshStutiHindi.html */; };
+		02D8CA6716FFED8200402CE9 /* HanumanAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4E16FFED8200402CE9 /* HanumanAartiHindi.html */; };
+		02D8CA6816FFED8200402CE9 /* HanumanBajrangBaanHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA4F16FFED8200402CE9 /* HanumanBajrangBaanHindi.html */; };
+		02D8CA6916FFED8200402CE9 /* HanumanChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5016FFED8200402CE9 /* HanumanChalisaHindi.html */; };
+		02D8CA6A16FFED8200402CE9 /* KaliAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5116FFED8200402CE9 /* KaliAartiHindi.html */; };
+		02D8CA6B16FFED8200402CE9 /* KaliChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5216FFED8200402CE9 /* KaliChalisaHindi.html */; };
+		02D8CA6C16FFED8200402CE9 /* KrishnaChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5316FFED8200402CE9 /* KrishnaChalisaHindi.html */; };
+		02D8CA6D16FFED8200402CE9 /* LakshmiAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5416FFED8200402CE9 /* LakshmiAartiHindi.html */; };
+		02D8CA6E16FFED8200402CE9 /* LakshmiChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5516FFED8200402CE9 /* LakshmiChalisaHindi.html */; };
+		02D8CA6F16FFED8200402CE9 /* RamAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5616FFED8200402CE9 /* RamAartiHindi.html */; };
+		02D8CA7016FFED8200402CE9 /* RamStutiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5716FFED8200402CE9 /* RamStutiHindi.html */; };
+		02D8CA7116FFED8200402CE9 /* SaiBabaAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5816FFED8200402CE9 /* SaiBabaAartiHindi.html */; };
+		02D8CA7216FFED8200402CE9 /* SaiBabaChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5916FFED8200402CE9 /* SaiBabaChalisaHindi.html */; };
+		02D8CA7316FFED8200402CE9 /* SaraswatiAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5A16FFED8200402CE9 /* SaraswatiAartiHindi.html */; };
+		02D8CA7416FFED8200402CE9 /* SaraswatiChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5B16FFED8200402CE9 /* SaraswatiChalisaHindi.html */; };
+		02D8CA7516FFED8200402CE9 /* ShaniAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5C16FFED8200402CE9 /* ShaniAartiHindi.html */; };
+		02D8CA7616FFED8200402CE9 /* ShaniChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5D16FFED8200402CE9 /* ShaniChalisaHindi.html */; };
+		02D8CA7716FFED8200402CE9 /* ShaniHundredNamesHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5E16FFED8200402CE9 /* ShaniHundredNamesHindi.html */; };
+		02D8CA7816FFED8200402CE9 /* ShivAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA5F16FFED8200402CE9 /* ShivAartiHindi.html */; };
+		02D8CA7916FFED8200402CE9 /* ShivChalisaHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA6016FFED8200402CE9 /* ShivChalisaHindi.html */; };
+		02D8CA7A16FFED8200402CE9 /* VishnuAartiHindi.html in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA6116FFED8200402CE9 /* VishnuAartiHindi.html */; };
+		02D8CA7E16FFF3B600402CE9 /* ourAppsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D8CA7D16FFF3B600402CE9 /* ourAppsTableViewController.m */; };
+		02D8CA80170023EE00402CE9 /* HanumanIcon48x63.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA7F170023EE00402CE9 /* HanumanIcon48x63.png */; };
+		02D8CA831701684A00402CE9 /* leafViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D8CA821701684A00402CE9 /* leafViewController.m */; };
+		02D8CA861701755000402CE9 /* AartiStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA841701755000402CE9 /* AartiStyle.css */; };
+		02D8CA871701755000402CE9 /* ChalisaStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = 02D8CA851701755000402CE9 /* ChalisaStyle.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020474F7170EA39500CAFE92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "../../../../../Katie/Developer/small_learning_Projects/recipe-1.9/recipe-1.9/Settings.bundle"; sourceTree = "<group>"; };
 		02D8CA1016FFCF5E00402CE9 /* recipe-1.9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recipe-1.9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D8CA1316FFCF5E00402CE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		02D8CA1516FFCF5E00402CE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +77,48 @@
 		02D8CA2C16FFCF5E00402CE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		02D8CA2E16FFCF5E00402CE9 /* testTableViewControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewControllerViewController.h; sourceTree = "<group>"; };
 		02D8CA2F16FFCF5E00402CE9 /* testTableViewControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewControllerViewController.m; sourceTree = "<group>"; };
+		02D8CA3616FFD2F300402CE9 /* 02-redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo.png"; sourceTree = "<group>"; };
+		02D8CA3716FFD2F300402CE9 /* 03-loopback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-loopback.png"; sourceTree = "<group>"; };
+		02D8CA3816FFD2F300402CE9 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
+		02D8CA3916FFD2F300402CE9 /* 05-shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-shuffle.png"; sourceTree = "<group>"; };
+		02D8CA3A16FFD2F300402CE9 /* 07-map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-map-marker.png"; sourceTree = "<group>"; };
+		02D8CA3B16FFD2F300402CE9 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-chat.png"; sourceTree = "<group>"; };
+		02D8CA4316FFD89900402CE9 /* appDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appDetails.h; sourceTree = "<group>"; };
+		02D8CA4416FFD89900402CE9 /* appDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appDetails.m; sourceTree = "<group>"; };
+		02D8CA4616FFDA0A00402CE9 /* appDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appDetailsViewController.h; sourceTree = "<group>"; };
+		02D8CA4716FFDA0A00402CE9 /* appDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appDetailsViewController.m; sourceTree = "<group>"; };
+		02D8CA4916FFED8200402CE9 /* DurgaAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DurgaAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA4A16FFED8200402CE9 /* DurgaChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DurgaChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA4B16FFED8200402CE9 /* GaneshAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GaneshAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA4C16FFED8200402CE9 /* GaneshChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GaneshChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA4D16FFED8200402CE9 /* GaneshStutiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GaneshStutiHindi.html; sourceTree = "<group>"; };
+		02D8CA4E16FFED8200402CE9 /* HanumanAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HanumanAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA4F16FFED8200402CE9 /* HanumanBajrangBaanHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HanumanBajrangBaanHindi.html; sourceTree = "<group>"; };
+		02D8CA5016FFED8200402CE9 /* HanumanChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HanumanChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5116FFED8200402CE9 /* KaliAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = KaliAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5216FFED8200402CE9 /* KaliChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = KaliChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5316FFED8200402CE9 /* KrishnaChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = KrishnaChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5416FFED8200402CE9 /* LakshmiAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LakshmiAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5516FFED8200402CE9 /* LakshmiChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LakshmiChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5616FFED8200402CE9 /* RamAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RamAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5716FFED8200402CE9 /* RamStutiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RamStutiHindi.html; sourceTree = "<group>"; };
+		02D8CA5816FFED8200402CE9 /* SaiBabaAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SaiBabaAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5916FFED8200402CE9 /* SaiBabaChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SaiBabaChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5A16FFED8200402CE9 /* SaraswatiAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SaraswatiAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5B16FFED8200402CE9 /* SaraswatiChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SaraswatiChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5C16FFED8200402CE9 /* ShaniAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShaniAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA5D16FFED8200402CE9 /* ShaniChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShaniChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA5E16FFED8200402CE9 /* ShaniHundredNamesHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShaniHundredNamesHindi.html; sourceTree = "<group>"; };
+		02D8CA5F16FFED8200402CE9 /* ShivAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShivAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA6016FFED8200402CE9 /* ShivChalisaHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ShivChalisaHindi.html; sourceTree = "<group>"; };
+		02D8CA6116FFED8200402CE9 /* VishnuAartiHindi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = VishnuAartiHindi.html; sourceTree = "<group>"; };
+		02D8CA7C16FFF3B600402CE9 /* ourAppsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ourAppsTableViewController.h; sourceTree = "<group>"; };
+		02D8CA7D16FFF3B600402CE9 /* ourAppsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ourAppsTableViewController.m; sourceTree = "<group>"; };
+		02D8CA7F170023EE00402CE9 /* HanumanIcon48x63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HanumanIcon48x63.png; sourceTree = "<group>"; };
+		02D8CA811701684A00402CE9 /* leafViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leafViewController.h; sourceTree = "<group>"; };
+		02D8CA821701684A00402CE9 /* leafViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leafViewController.m; sourceTree = "<group>"; };
+		02D8CA841701755000402CE9 /* AartiStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = AartiStyle.css; sourceTree = "<group>"; };
+		02D8CA851701755000402CE9 /* ChalisaStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ChalisaStyle.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +138,7 @@
 		02D8CA0716FFCF5E00402CE9 = {
 			isa = PBXGroup;
 			children = (
+				02D8CA881702248800402CE9 /* my addition */,
 				02D8CA1916FFCF5E00402CE9 /* recipe-1.9 */,
 				02D8CA1216FFCF5E00402CE9 /* Frameworks */,
 				02D8CA1116FFCF5E00402CE9 /* Products */,
@@ -88,6 +171,7 @@
 				02D8CA2B16FFCF5E00402CE9 /* MainStoryboard.storyboard */,
 				02D8CA2E16FFCF5E00402CE9 /* testTableViewControllerViewController.h */,
 				02D8CA2F16FFCF5E00402CE9 /* testTableViewControllerViewController.m */,
+				02D8CA89170224B900402CE9 /* core code */,
 				02D8CA1A16FFCF5E00402CE9 /* Supporting Files */,
 			);
 			path = "recipe-1.9";
@@ -96,15 +180,89 @@
 		02D8CA1A16FFCF5E00402CE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02D8CA7F170023EE00402CE9 /* HanumanIcon48x63.png */,
+				02D8CA7B16FFED8D00402CE9 /* Aarti katha */,
 				02D8CA1B16FFCF5E00402CE9 /* recipe-1.9-Info.plist */,
+				02D8CA4216FFD2FB00402CE9 /* icons */,
 				02D8CA1C16FFCF5E00402CE9 /* InfoPlist.strings */,
 				02D8CA1F16FFCF5E00402CE9 /* main.m */,
 				02D8CA2116FFCF5E00402CE9 /* recipe-1.9-Prefix.pch */,
 				02D8CA2516FFCF5E00402CE9 /* Default.png */,
 				02D8CA2716FFCF5E00402CE9 /* Default@2x.png */,
 				02D8CA2916FFCF5E00402CE9 /* Default-568h@2x.png */,
+				020474F7170EA39500CAFE92 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02D8CA4216FFD2FB00402CE9 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				02D8CA3616FFD2F300402CE9 /* 02-redo.png */,
+				02D8CA3716FFD2F300402CE9 /* 03-loopback.png */,
+				02D8CA3816FFD2F300402CE9 /* 04-squiggle.png */,
+				02D8CA3916FFD2F300402CE9 /* 05-shuffle.png */,
+				02D8CA3A16FFD2F300402CE9 /* 07-map-marker.png */,
+				02D8CA3B16FFD2F300402CE9 /* 08-chat.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		02D8CA7B16FFED8D00402CE9 /* Aarti katha */ = {
+			isa = PBXGroup;
+			children = (
+				02D8CA841701755000402CE9 /* AartiStyle.css */,
+				02D8CA851701755000402CE9 /* ChalisaStyle.css */,
+				02D8CA4916FFED8200402CE9 /* DurgaAartiHindi.html */,
+				02D8CA4A16FFED8200402CE9 /* DurgaChalisaHindi.html */,
+				02D8CA4B16FFED8200402CE9 /* GaneshAartiHindi.html */,
+				02D8CA4C16FFED8200402CE9 /* GaneshChalisaHindi.html */,
+				02D8CA4D16FFED8200402CE9 /* GaneshStutiHindi.html */,
+				02D8CA4E16FFED8200402CE9 /* HanumanAartiHindi.html */,
+				02D8CA4F16FFED8200402CE9 /* HanumanBajrangBaanHindi.html */,
+				02D8CA5016FFED8200402CE9 /* HanumanChalisaHindi.html */,
+				02D8CA5116FFED8200402CE9 /* KaliAartiHindi.html */,
+				02D8CA5216FFED8200402CE9 /* KaliChalisaHindi.html */,
+				02D8CA5316FFED8200402CE9 /* KrishnaChalisaHindi.html */,
+				02D8CA5416FFED8200402CE9 /* LakshmiAartiHindi.html */,
+				02D8CA5516FFED8200402CE9 /* LakshmiChalisaHindi.html */,
+				02D8CA5616FFED8200402CE9 /* RamAartiHindi.html */,
+				02D8CA5716FFED8200402CE9 /* RamStutiHindi.html */,
+				02D8CA5816FFED8200402CE9 /* SaiBabaAartiHindi.html */,
+				02D8CA5916FFED8200402CE9 /* SaiBabaChalisaHindi.html */,
+				02D8CA5A16FFED8200402CE9 /* SaraswatiAartiHindi.html */,
+				02D8CA5B16FFED8200402CE9 /* SaraswatiChalisaHindi.html */,
+				02D8CA5C16FFED8200402CE9 /* ShaniAartiHindi.html */,
+				02D8CA5D16FFED8200402CE9 /* ShaniChalisaHindi.html */,
+				02D8CA5E16FFED8200402CE9 /* ShaniHundredNamesHindi.html */,
+				02D8CA5F16FFED8200402CE9 /* ShivAartiHindi.html */,
+				02D8CA6016FFED8200402CE9 /* ShivChalisaHindi.html */,
+				02D8CA6116FFED8200402CE9 /* VishnuAartiHindi.html */,
+			);
+			name = "Aarti katha";
+			sourceTree = "<group>";
+		};
+		02D8CA881702248800402CE9 /* my addition */ = {
+			isa = PBXGroup;
+			children = (
+				02D8CA811701684A00402CE9 /* leafViewController.h */,
+				02D8CA821701684A00402CE9 /* leafViewController.m */,
+			);
+			name = "my addition";
+			path = "recipe-1.9";
+			sourceTree = "<group>";
+		};
+		02D8CA89170224B900402CE9 /* core code */ = {
+			isa = PBXGroup;
+			children = (
+				02D8CA7C16FFF3B600402CE9 /* ourAppsTableViewController.h */,
+				02D8CA4716FFDA0A00402CE9 /* appDetailsViewController.m */,
+				02D8CA4616FFDA0A00402CE9 /* appDetailsViewController.h */,
+				02D8CA7D16FFF3B600402CE9 /* ourAppsTableViewController.m */,
+				02D8CA4316FFD89900402CE9 /* appDetails.h */,
+				02D8CA4416FFD89900402CE9 /* appDetails.m */,
+			);
+			name = "core code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +322,41 @@
 				02D8CA2816FFCF5E00402CE9 /* Default@2x.png in Resources */,
 				02D8CA2A16FFCF5E00402CE9 /* Default-568h@2x.png in Resources */,
 				02D8CA2D16FFCF5E00402CE9 /* MainStoryboard.storyboard in Resources */,
+				02D8CA3C16FFD2F300402CE9 /* 02-redo.png in Resources */,
+				02D8CA3D16FFD2F300402CE9 /* 03-loopback.png in Resources */,
+				02D8CA3E16FFD2F300402CE9 /* 04-squiggle.png in Resources */,
+				02D8CA3F16FFD2F300402CE9 /* 05-shuffle.png in Resources */,
+				02D8CA4016FFD2F300402CE9 /* 07-map-marker.png in Resources */,
+				02D8CA4116FFD2F300402CE9 /* 08-chat.png in Resources */,
+				02D8CA6216FFED8200402CE9 /* DurgaAartiHindi.html in Resources */,
+				02D8CA6316FFED8200402CE9 /* DurgaChalisaHindi.html in Resources */,
+				02D8CA6416FFED8200402CE9 /* GaneshAartiHindi.html in Resources */,
+				02D8CA6516FFED8200402CE9 /* GaneshChalisaHindi.html in Resources */,
+				02D8CA6616FFED8200402CE9 /* GaneshStutiHindi.html in Resources */,
+				02D8CA6716FFED8200402CE9 /* HanumanAartiHindi.html in Resources */,
+				02D8CA6816FFED8200402CE9 /* HanumanBajrangBaanHindi.html in Resources */,
+				02D8CA6916FFED8200402CE9 /* HanumanChalisaHindi.html in Resources */,
+				02D8CA6A16FFED8200402CE9 /* KaliAartiHindi.html in Resources */,
+				02D8CA6B16FFED8200402CE9 /* KaliChalisaHindi.html in Resources */,
+				02D8CA6C16FFED8200402CE9 /* KrishnaChalisaHindi.html in Resources */,
+				02D8CA6D16FFED8200402CE9 /* LakshmiAartiHindi.html in Resources */,
+				02D8CA6E16FFED8200402CE9 /* LakshmiChalisaHindi.html in Resources */,
+				02D8CA6F16FFED8200402CE9 /* RamAartiHindi.html in Resources */,
+				02D8CA7016FFED8200402CE9 /* RamStutiHindi.html in Resources */,
+				02D8CA7116FFED8200402CE9 /* SaiBabaAartiHindi.html in Resources */,
+				02D8CA7216FFED8200402CE9 /* SaiBabaChalisaHindi.html in Resources */,
+				02D8CA7316FFED8200402CE9 /* SaraswatiAartiHindi.html in Resources */,
+				02D8CA7416FFED8200402CE9 /* SaraswatiChalisaHindi.html in Resources */,
+				02D8CA7516FFED8200402CE9 /* ShaniAartiHindi.html in Resources */,
+				02D8CA7616FFED8200402CE9 /* ShaniChalisaHindi.html in Resources */,
+				02D8CA7716FFED8200402CE9 /* ShaniHundredNamesHindi.html in Resources */,
+				02D8CA7816FFED8200402CE9 /* ShivAartiHindi.html in Resources */,
+				02D8CA7916FFED8200402CE9 /* ShivChalisaHindi.html in Resources */,
+				02D8CA7A16FFED8200402CE9 /* VishnuAartiHindi.html in Resources */,
+				02D8CA80170023EE00402CE9 /* HanumanIcon48x63.png in Resources */,
+				02D8CA861701755000402CE9 /* AartiStyle.css in Resources */,
+				02D8CA871701755000402CE9 /* ChalisaStyle.css in Resources */,
+				020474F8170EA39500CAFE92 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +370,10 @@
 				02D8CA2016FFCF5E00402CE9 /* main.m in Sources */,
 				02D8CA2416FFCF5E00402CE9 /* testTableViewControllerAppDelegate.m in Sources */,
 				02D8CA3016FFCF5E00402CE9 /* testTableViewControllerViewController.m in Sources */,
+				02D8CA4516FFD89900402CE9 /* appDetails.m in Sources */,
+				02D8CA4816FFDA0A00402CE9 /* appDetailsViewController.m in Sources */,
+				02D8CA7E16FFF3B600402CE9 /* ourAppsTableViewController.m in Sources */,
+				02D8CA831701684A00402CE9 /* leafViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +496,7 @@
 				02D8CA3516FFCF5E00402CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

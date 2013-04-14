@@ -18,8 +18,11 @@
 		025C506D16E71B5C00E2FE2D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 025C506C16E71B5C00E2FE2D /* Default-568h@2x.png */; };
 		025C507016E71B5C00E2FE2D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025C506E16E71B5C00E2FE2D /* MainStoryboard.storyboard */; };
 		025C507316E71B5C00E2FE2D /* scrollViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C507216E71B5C00E2FE2D /* scrollViewTestViewController.m */; };
-		025C507D16E8544B00E2FE2D /* apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 025C507B16E8544B00E2FE2D /* apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg */; };
-		025C507E16E8544B00E2FE2D /* Xcode_by_skandelabro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 025C507C16E8544B00E2FE2D /* Xcode_by_skandelabro.jpg */; };
+		02790B4516F503E0008ACEBE /* cutomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 02790B4416F503E0008ACEBE /* cutomSegue.m */; };
+		02790B4716F5043D008ACEBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02790B4616F5043D008ACEBE /* QuartzCore.framework */; };
+		02F25C6C16EE630E00F0A903 /* xcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F25C6B16EE630E00F0A903 /* xcode.png */; };
+		02F25C6F16EE631700F0A903 /* Xcode-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F25C6D16EE631700F0A903 /* Xcode-icon.png */; };
+		02F25C7016EE631700F0A903 /* Xcode-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F25C6E16EE631700F0A903 /* Xcode-icon2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +42,12 @@
 		025C506F16E71B5C00E2FE2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		025C507116E71B5C00E2FE2D /* scrollViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scrollViewTestViewController.h; sourceTree = "<group>"; };
 		025C507216E71B5C00E2FE2D /* scrollViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = scrollViewTestViewController.m; sourceTree = "<group>"; };
-		025C507B16E8544B00E2FE2D /* apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg"; sourceTree = "<group>"; };
-		025C507C16E8544B00E2FE2D /* Xcode_by_skandelabro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Xcode_by_skandelabro.jpg; sourceTree = "<group>"; };
+		02790B4316F503E0008ACEBE /* cutomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cutomSegue.h; path = ../../../../../Katie/Developer/small_learning_Projects/scrollViewTest/scrollViewTest/cutomSegue.h; sourceTree = "<group>"; };
+		02790B4416F503E0008ACEBE /* cutomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cutomSegue.m; path = ../../../../../Katie/Developer/small_learning_Projects/scrollViewTest/scrollViewTest/cutomSegue.m; sourceTree = "<group>"; };
+		02790B4616F5043D008ACEBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		02F25C6B16EE630E00F0A903 /* xcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xcode.png; path = ../../../../../Katie/Developer/small_learning_Projects/scrollViewTest/scrollViewTest/xcode.png; sourceTree = "<group>"; };
+		02F25C6D16EE631700F0A903 /* Xcode-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Xcode-icon.png"; path = "../../../../../Katie/Developer/small_learning_Projects/scrollViewTest/scrollViewTest/Xcode-icon.png"; sourceTree = "<group>"; };
+		02F25C6E16EE631700F0A903 /* Xcode-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Xcode-icon2.png"; path = "../../../../../Katie/Developer/small_learning_Projects/scrollViewTest/scrollViewTest/Xcode-icon2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02790B4716F5043D008ACEBE /* QuartzCore.framework in Frameworks */,
 				025C505716E71B5B00E2FE2D /* UIKit.framework in Frameworks */,
 				025C505916E71B5B00E2FE2D /* Foundation.framework in Frameworks */,
 				025C505B16E71B5B00E2FE2D /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +68,7 @@
 		025C504A16E71B5B00E2FE2D = {
 			isa = PBXGroup;
 			children = (
+				02790B4616F5043D008ACEBE /* QuartzCore.framework */,
 				025C505C16E71B5C00E2FE2D /* scrollViewTest */,
 				025C505516E71B5B00E2FE2D /* Frameworks */,
 				025C505416E71B5B00E2FE2D /* Products */,
@@ -88,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				025C506E16E71B5C00E2FE2D /* MainStoryboard.storyboard */,
+				02790B4316F503E0008ACEBE /* cutomSegue.h */,
+				02790B4416F503E0008ACEBE /* cutomSegue.m */,
 				025C507116E71B5C00E2FE2D /* scrollViewTestViewController.h */,
 				025C507216E71B5C00E2FE2D /* scrollViewTestViewController.m */,
 				025C505D16E71B5C00E2FE2D /* Supporting Files */,
@@ -98,10 +109,11 @@
 		025C505D16E71B5C00E2FE2D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02F25C6D16EE631700F0A903 /* Xcode-icon.png */,
+				02F25C6E16EE631700F0A903 /* Xcode-icon2.png */,
+				02F25C6B16EE630E00F0A903 /* xcode.png */,
 				025C506516E71B5C00E2FE2D /* scrollViewTestAppDelegate.h */,
 				025C506616E71B5C00E2FE2D /* scrollViewTestAppDelegate.m */,
-				025C507B16E8544B00E2FE2D /* apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg */,
-				025C507C16E8544B00E2FE2D /* Xcode_by_skandelabro.jpg */,
 				025C505E16E71B5C00E2FE2D /* scrollViewTest-Info.plist */,
 				025C505F16E71B5C00E2FE2D /* InfoPlist.strings */,
 				025C506216E71B5C00E2FE2D /* main.m */,
@@ -170,8 +182,9 @@
 				025C506B16E71B5C00E2FE2D /* Default@2x.png in Resources */,
 				025C506D16E71B5C00E2FE2D /* Default-568h@2x.png in Resources */,
 				025C507016E71B5C00E2FE2D /* MainStoryboard.storyboard in Resources */,
-				025C507D16E8544B00E2FE2D /* apple_developer_wallpaper_by_chuck67322-d4y94dc.jpg in Resources */,
-				025C507E16E8544B00E2FE2D /* Xcode_by_skandelabro.jpg in Resources */,
+				02F25C6C16EE630E00F0A903 /* xcode.png in Resources */,
+				02F25C6F16EE631700F0A903 /* Xcode-icon.png in Resources */,
+				02F25C7016EE631700F0A903 /* Xcode-icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +198,7 @@
 				025C506316E71B5C00E2FE2D /* main.m in Sources */,
 				025C506716E71B5C00E2FE2D /* scrollViewTestAppDelegate.m in Sources */,
 				025C507316E71B5C00E2FE2D /* scrollViewTestViewController.m in Sources */,
+				02790B4516F503E0008ACEBE /* cutomSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +321,7 @@
 				025C507816E71B5C00E2FE2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -18,6 +18,7 @@
 		02A9E8941717DDBD005A0C99 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A9E8931717DDBD005A0C99 /* Default-568h@2x.png */; };
 		02A9E8971717DDBD005A0C99 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A9E8951717DDBD005A0C99 /* MainStoryboard.storyboard */; };
 		02A9E89A1717DDBD005A0C99 /* testAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9E8991717DDBD005A0C99 /* testAdViewController.m */; };
+		02A9E8A11717DDE9005A0C99 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9E8A01717DDE9005A0C99 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		02A9E8961717DDBD005A0C99 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		02A9E8981717DDBD005A0C99 /* testAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testAdViewController.h; sourceTree = "<group>"; };
 		02A9E8991717DDBD005A0C99 /* testAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testAdViewController.m; sourceTree = "<group>"; };
+		02A9E8A01717DDE9005A0C99 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A9E8A11717DDE9005A0C99 /* iAd.framework in Frameworks */,
 				02A9E87E1717DDBD005A0C99 /* UIKit.framework in Frameworks */,
 				02A9E8801717DDBD005A0C99 /* Foundation.framework in Frameworks */,
 				02A9E8821717DDBD005A0C99 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		02A9E8711717DDBD005A0C99 = {
 			isa = PBXGroup;
 			children = (
+				02A9E8A01717DDE9005A0C99 /* iAd.framework */,
 				02A9E8831717DDBD005A0C99 /* test_iAd */,
 				02A9E87C1717DDBD005A0C99 /* Frameworks */,
 				02A9E87B1717DDBD005A0C99 /* Products */,
@@ -83,8 +87,6 @@
 		02A9E8831717DDBD005A0C99 /* test_iAd */ = {
 			isa = PBXGroup;
 			children = (
-				02A9E88C1717DDBD005A0C99 /* testAdAppDelegate.h */,
-				02A9E88D1717DDBD005A0C99 /* testAdAppDelegate.m */,
 				02A9E8951717DDBD005A0C99 /* MainStoryboard.storyboard */,
 				02A9E8981717DDBD005A0C99 /* testAdViewController.h */,
 				02A9E8991717DDBD005A0C99 /* testAdViewController.m */,
@@ -96,6 +98,8 @@
 		02A9E8841717DDBD005A0C99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02A9E88C1717DDBD005A0C99 /* testAdAppDelegate.h */,
+				02A9E88D1717DDBD005A0C99 /* testAdAppDelegate.m */,
 				02A9E8851717DDBD005A0C99 /* test_iAd-Info.plist */,
 				02A9E8861717DDBD005A0C99 /* InfoPlist.strings */,
 				02A9E8891717DDBD005A0C99 /* main.m */,

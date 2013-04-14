@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface testAdViewController : UIViewController
+
+@interface testAdViewController : UIViewController <ADBannerViewDelegate>
+
+@property (nonatomic, copy) NSString *text;
+@property(nonatomic, assign)BOOL bannerIsVisible;
+//@property (strong, nonatomic) IBOutlet ADBannerView *iAdView;
+@property (strong, nonatomic) IBOutlet ADBannerView *iAdView;
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+
 
 @end

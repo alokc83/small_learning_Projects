@@ -12,4 +12,8 @@
 
  @property (weak, nonatomic) IBOutlet UIWebView *webView;   
 
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
+
+- (IBAction)myButtonAction:(UIButton *)sender;
+
 @end

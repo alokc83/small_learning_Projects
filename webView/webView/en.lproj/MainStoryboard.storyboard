@@ -14,17 +14,47 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mz8-A3-buy">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="413" id="HL7-2p-2po"/>
+                                </constraints>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-lE-LMb">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABV-AB-CWe">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myButtonAction:" destination="2" eventType="touchUpInside" id="AUb-vn-R4R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="V5u-lE-LMb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="Cde-fI-lgO"/>
                             <constraint firstItem="Mz8-A3-buy" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Lm2-ox-nba"/>
-                            <constraint firstItem="Mz8-A3-buy" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Zr8-ae-cPL"/>
+                            <constraint firstAttribute="bottom" secondItem="ABV-AB-CWe" secondAttribute="bottom" constant="30" id="Pfj-fd-9K9"/>
+                            <constraint firstItem="ABV-AB-CWe" firstAttribute="centerX" secondItem="Mz8-A3-buy" secondAttribute="centerX" type="default" id="UMd-9E-qy4"/>
+                            <constraint firstItem="V5u-lE-LMb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="10" id="WSa-eY-EHy"/>
                             <constraint firstItem="Mz8-A3-buy" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="rN5-Gk-99E"/>
                             <constraint firstItem="Mz8-A3-buy" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="xZq-px-MIr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myButton" destination="ABV-AB-CWe" id="T7i-4i-sdc"/>
                         <outlet property="webView" destination="Mz8-A3-buy" id="qNF-wh-TJs"/>
                     </connections>
                 </viewController>
@@ -32,6 +62,19 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="webViewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/webViewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myButtonAction:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
